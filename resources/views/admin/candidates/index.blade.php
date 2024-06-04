@@ -23,13 +23,13 @@
                 <tbody>
                     @foreach ($candidates as $candidate)
                         <tr>
-                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                            <td class="px-5 py-5 border-b border-gray-200 text-sm">
                                 {{ $candidate->name }}
                             </td>
-                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                            <td class="px-5 py-5 border-b border-gray-200  text-sm">
                                 {{ $candidate->position->name }}
                             </td>
-                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                            <td class="px-5 py-5 border-b border-gray-200 text-sm">
                                 <a href="{{ route('admin.candidates.edit', $candidate->id) }}"
                                     class="inline-block px-2 py-1 text-xs font-bold leading-tight uppercase rounded-lg text-black bg-yellow-100 hover:bg-yellow-200 focus:outline-none focus:ring-0 focus:ring-offset-2 focus:ring-yellow-500">Edit</a>
                                 <form action="{{ route('admin.candidates.destroy', $candidate->id) }}" method="POST"

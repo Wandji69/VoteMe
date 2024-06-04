@@ -909,6 +909,7 @@
         <div
             class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
             <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
+
                 <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
                     <div class="flex lg:justify-center lg:col-start-2">
                         <svg class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 62 65" fill="none"
@@ -943,14 +944,12 @@
                 </header>
 
                 <main class="mt-6">
-                    <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
-
-
+                    <div class="grid gap-6 lg:grid-cols-2 lg:gap-8 lg:justify-center">
                         <div class="py-12">
                             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                                    <div class="p-6 text-gray-900 dark:text-gray-100">
-                                        {{ __("You're logged in!") }}
+                                <div class="dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                                    <div class="p-6 text-white-900 dark:text-gray-100flex lg:justify-center w-auto text-white">
+                                        Please Login To Vote
                                     </div>
                                 </div>
                             </div>
@@ -958,7 +957,7 @@
                     </div>
                 </main>
 
-                <footer class="py-16 text-center text-sm text-black dark:text-white/70">
+                <footer class="py-16 text-center text-sm mt-7 text-black dark:text-white/70">
                     Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                 </footer>
             </div>

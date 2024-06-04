@@ -40,6 +40,7 @@ class VoteCastMail extends Mailable
     {
         return new Content(
             view: 'emails.votecast',
+            with: ['candidate' => $this->candidate]
         );
     }
 
@@ -50,6 +51,6 @@ class VoteCastMail extends Mailable
      */
     public function attachments(): array
     {
-        return ['candidate', $this->candidate];
+        return [];
     }
 }

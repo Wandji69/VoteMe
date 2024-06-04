@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="container mx-auto p-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg">
-        <h1 class="text-2xl font-bold mb-6 text-center">Vote for Candidates</h1>
+        <h1 class="text-2xl font-bold mb-6 text-center text-white">Vote for Candidates</h1>
 
         @foreach ($positions as $position)
-            <div class="mb-4">
-                <h2 class="text-xl font-semibold mb-2">{{ $position->name }}</h2>
+            <div class="mb-4 grid">
+                <h2 class="text-xl dark:text-white font-semibold mb-2">{{ $position->name }}</h2>
                 <form action="{{ route('vote.store') }}" method="POST" class="space-y-2">
                     @csrf
                     @foreach ($position->candidates as $candidate)
@@ -15,7 +15,7 @@
                                 class="form-check-input text-blue-600 dark:text-blue-400 focus:ring-blue-500 dark:focus:ring-blue-400"
                                 type="radio" name="candidate_id" id="candidate{{ $candidate->id }}"
                                 value="{{ $candidate->id }}" required>
-                            <label class="form-check-label" for="candidate{{ $candidate->id }}">
+                            <label class="form-check-label dark:text-white" for="candidate{{ $candidate->id }}">
                                 {{ $candidate->name }}
                             </label>
                         </div>

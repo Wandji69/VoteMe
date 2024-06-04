@@ -41,6 +41,11 @@ class VoteNotification extends Mailable
     {
         return new Content(
             view: 'emails.vote_notification',
+            with:[
+                'candidateName' => $this->candidate->name,
+                'positionName' => $this->candidate->position->name,
+                'totalVotes' => $this->candidate->total_votes,
+            ]
         );
     }
 
@@ -51,10 +56,6 @@ class VoteNotification extends Mailable
      */
     public function attachments(): array
     {
-        return [
-            'candidateName' => $this->candidate->name,
-            'positionName' => $this->candidate->position->name,
-            'totalVotes' => $this->candidate->total_votes,
-        ];
+        return [];
     }
 }
